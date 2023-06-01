@@ -26,7 +26,7 @@ The recommendation model is based on the K-Nearest Neighbors (KNN) algorithm. By
 
 1. Clone the repository:
 
-git clone https://github.com/your-username/recommendation-system.git
+git clone https://github.com/camerondawkins0/recommendation-system.git
 
 2. Install the required dependencies:
 
