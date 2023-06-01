@@ -1,0 +1,100 @@
+Anime Recommendations Timeline/Requirements:
+
+Synopsis:
+"I am creating this recommendation model/application to aid with broadening one's
+anime horizons. The application will take in a user's favorite anime(s) and return
+recommendations based on the plot, genre, and characters within the anime(s). 
+
+I have a difficult time finding new anime that fit my interests without getting
+burnt out before I can even find a new one. So this will help me stay interested
+as anime is past time of mine."
+
+How:
+- Data Collection: 
+    - AnimeDB API
+    - AnimeNewsNetwork API
+
+    What to collect:
+    - Anime Title
+    - Anime Synopsis
+    - Anime Genres
+    - Anime Characters
+        - VA Names
+    - Anime Plot
+    - Anime Episodes
+
+- Data Storage:
+    - MongoDB (Cloud Based)
+
+- Data Cleaning:
+    - Remove any anime with a rating of 0
+    - Remove any anime with no plot summary
+    - Remove any anime with no genres
+    - Remove any anime with less than 5 episodes
+
+- Data Preprocessing:
+    - Tokenize the plot summary
+    - Remove stop words
+    - Lemmatize the plot summary
+    - Vectorize the plot summary
+    - Vectorize the genres
+    - Vectorize the characters
+    - Create boolean array mapped to genre (OHE)
+
+- Data Analysis:
+    - Create a recommendation model based on the data collected
+    - Create a web application to display the recommendations
+
+    - Model Selection:
+        - KNN
+        - KMeans
+        - Random Forest
+        - Naive Bayes
+        - SVM
+        - Decision Tree
+        - Logistic Regression
+
+Feedback:
+- Streamlit input form for reviews
+
+GPT output:
+
+Data Collection: (1-2 weeks)
+
+Explore and understand the APIs available (MyAnimeList, Kitsu, AniList, AnimeNewsNetwork, Anime-Planet, AnimeFreak).
+Implement API calls to fetch anime data including title, synopsis, genres, characters, voice actor names, plot, rating, and episodes.
+Store the collected data in a suitable database (MongoDB, SQLite, AirTable, Notion).
+Data Cleaning: (1-2 days)
+
+Remove anime entries with a rating of 0.
+Eliminate anime without a plot summary, genres, or less than 5 episodes.
+Data Preprocessing: (1-2 days)
+
+Tokenize the plot summaries.
+Remove stop words from the plot summaries.
+Lemmatize the plot summaries to reduce words to their base form.
+Vectorize the plot summaries, genres, and characters for further analysis.
+Data Analysis: (1-2 weeks)
+
+Select an appropriate recommendation model based on the data collected (KNN, KMeans, Random Forest, Naive Bayes, SVM, Decision Tree, Logistic Regression).
+Train the recommendation model using the preprocessed data.
+Test and evaluate the model's performance using suitable evaluation metrics.
+Web Application Development: (2-4 weeks)
+
+Build a web application using a framework like Flask or Django.
+Implement user interface components for inputting favorite anime(s) and displaying recommendations.
+Connect the recommendation model to the web application and integrate the data retrieval and processing steps.
+Testing and Refinement: (1-2 weeks)
+
+Conduct thorough testing of the web application to ensure its functionality and usability.
+Gather feedback from users and make necessary improvements based on their input.
+Fine-tune the recommendation model if needed based on user feedback and performance evaluation.
+Deployment: (1 week)
+
+Deploy the web application on a suitable hosting platform (e.g., Heroku, AWS, or Azure).
+Set up the necessary infrastructure to support the application in a production environment.
+Perform final testing to ensure the deployed application is working as intended.
+Documentation and Maintenance: (ongoing)
+
+Prepare documentation that explains the application's functionality, features, and usage instructions.
+Provide regular updates and maintenance to ensure the application remains functional and up to date with the APIs.
